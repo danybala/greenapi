@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green API Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="form">
+            <div class="form-group">
+                <label for="idInstance">ID экземпляра</label>
+                <input type="text" id="idInstance">
+            </div>
+
+            <div class="form-group">
+                <label for="apiTokenInstance">API токен экземпляра</label>
+                <input type="text" id="apiTokenInstance">
+            </div>
+
+            <div class="form-group">
+                <button onclick="getSettings()">Get Settings</button>
+                <button onclick="getStateInstance()">Get State Instance</button>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="phoneNumberMessages">
+                <textarea id="message" rows="5" cols="30"></textarea>
+                <button onclick="sendMessage()">Send message</button>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="phoneNumberFiles">
+                <textarea id="link" rows="3" cols="30"></textarea>
+                <button onclick="sendFileByUrl()">Send file by URL</button>
+            </div>
+
+        </div>
+
+        <textarea class="output" id="response" rows="10" cols="50" readonly></textarea>
+
+        <script src="index.js"></script>
+    </div>
+</body>
+
+</html>
